@@ -25,12 +25,10 @@ exports.signup = (req, res, next) => {
       })
       .catch((error) => res.status(500).json({ error }));
   } else {
-    return res
-      .status(404)
-      .json({
-        message:
-          "Le mot de passe doit contenir au moins un nombre, une minuscule, une majuscule et être composé de 6 caractères minimum !",
-      });
+    return res.status(404).json({
+      message:
+        "Le mot de passe doit contenir au moins un nombre, une minuscule, une majuscule et être composé de 6 caractères minimum !",
+    });
   }
 };
 
